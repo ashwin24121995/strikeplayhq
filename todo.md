@@ -47,3 +47,11 @@
 
 ## Bug Fixes / Policy Compliance
 - [x] Remove all WhatsApp links and references from the entire website (policy violation)
+- [x] Remove all "Fantasy Sports", "betting", "gambling" terminology — replace with entertainment/fun language
+- [x] Remove all geographic/state restrictions from Terms and all pages
+- [x] Remove all fake/mock data (user counts, testimonials, fabricated statistics)
+- [x] Update Home page to remove fake stats, mock user counts, testimonials
+- [x] Update About, Matches, Contests, Leaderboard, Dashboard pages
+- [x] Update all legal pages (Terms, Privacy, Fair Play, Responsible Gaming, Refund)
+- [x] Update static data file
+- [x] Update meta tags and SEO descriptions

@@ -60,12 +60,6 @@ export interface FAQ {
   answer: string;
 }
 
-export interface Testimonial {
-  name: string;
-  location: string;
-  text: string;
-  rating: number;
-}
 
 // ─── Static Matches ──────────────────────────────────────────────────────────
 
@@ -189,28 +183,18 @@ export const scoringRules: ScoringRule[] = [
 // ─── FAQs ────────────────────────────────────────────────────────────────────
 
 export const faqs: FAQ[] = [
-  { question: "What is Squad Master Sports?", answer: "Squad Master Sports is India's free dream cricket platform where you can build your dream cricket team, compete with friends, and track your performance. It is 100% free forever with no hidden costs, deposits, or entry fees." },
+  { question: "What is Squad Master Sports?", answer: "Squad Master Sports is India's free cricket entertainment platform where you can build your cricket team, compete with friends, and track your performance. It is 100% free forever with no hidden costs, deposits, or entry fees. The platform is designed purely for fun and entertainment." },
   { question: "Is it really free to play?", answer: "Yes, absolutely! Squad Master Sports is completely free. There are no entry fees, no premium subscriptions, no in-app purchases, and no virtual currency. All features are unlocked for every user from day one." },
   { question: "How do I create a team?", answer: "After signing up, browse the available matches, select a match, and start building your team. You get 100 credits to select 11 players from both teams. Choose a Captain (2x points) and Vice-Captain (1.5x points) to maximize your score." },
   { question: "How are points calculated?", answer: "Points are calculated based on real match performances. Batsmen earn points for runs, boundaries, and milestones. Bowlers earn points for wickets and maiden overs. Fielders earn points for catches, stumpings, and run-outs. Visit our Scoring System page for full details." },
   { question: "Can I join multiple contests for the same match?", answer: "Yes! You can create multiple teams and join different contests for the same match. Each contest has its own leaderboard and rankings." },
-  { question: "Is this platform legal in India?", answer: "Yes. Squad Master Sports is a skill-based gaming platform, which is legal in most Indian states. However, users from Andhra Pradesh, Assam, Nagaland, Odisha, Sikkim, and Telangana are restricted from participating due to state-specific regulations." },
+  { question: "Is this an entertainment platform?", answer: "Yes. Squad Master Sports is a free-to-play cricket entertainment platform. No real money is involved at any stage. There are no entry fees, no deposits, and no cash prizes. It is designed purely for fun and entertainment." },
   { question: "What is the minimum age to play?", answer: "You must be at least 18 years old to register and use Squad Master Sports. Age verification may be required." },
   { question: "How do I contact support?", answer: "You can reach us through our Contact page or email us at support@squadmastersports.com. Our support team typically responds within 24 hours." },
   { question: "Can I play on mobile?", answer: "Yes! Squad Master Sports is fully responsive and works perfectly on all devices — mobile phones, tablets, and desktops. No app download is required." },
   { question: "How do I become a better player?", answer: "Check out our How to Play guide and educational resources. Study player form, pitch conditions, and head-to-head records. Practice regularly and learn from the leaderboard toppers' strategies." },
 ];
 
-// ─── Testimonials ────────────────────────────────────────────────────────────
-
-export const testimonials: Testimonial[] = [
-  { name: "Rahul K.", location: "Mumbai", text: "Best free cricket platform I've ever used. The interface is clean and the scoring is accurate. Love competing with my friends!", rating: 5 },
-  { name: "Priya S.", location: "Bengaluru", text: "Finally a platform where I can enjoy dream cricket without spending money. The educational content helped me improve my strategy.", rating: 5 },
-  { name: "Amit P.", location: "Delhi", text: "Great platform for cricket enthusiasts. The team builder is intuitive and the leaderboards keep me coming back for more.", rating: 4 },
-  { name: "Sneha R.", location: "Chennai", text: "I love how transparent the scoring system is. No hidden fees, no tricks. Just pure cricket fun!", rating: 5 },
-  { name: "Vikram M.", location: "Hyderabad", text: "The live scoring feature is amazing. I can track my team's performance in real-time. Highly recommended!", rating: 5 },
-  { name: "Ananya D.", location: "Kolkata", text: "As a cricket newbie, the How to Play guide was incredibly helpful. Now I'm in the top 100 on the leaderboard!", rating: 4 },
-];
 
 // ─── Team Colors ─────────────────────────────────────────────────────────────
 

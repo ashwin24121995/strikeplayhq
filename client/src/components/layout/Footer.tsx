@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Trophy, Mail, Phone, MapPin } from "lucide-react";
+import { Trophy, Mail, MapPin } from "lucide-react";
 
 const footerLinks = {
   platform: [
@@ -20,7 +20,7 @@ const footerLinks = {
     { label: "Terms & Conditions", href: "/terms" },
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Fair Play Policy", href: "/fair-play" },
-    { label: "Responsible Gaming", href: "/responsible-gaming" },
+    { label: "Responsible Play", href: "/responsible-gaming" },
     { label: "Refund Policy", href: "/refund" },
   ],
 };
@@ -47,7 +47,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm text-background/60 leading-relaxed mb-5">
-              India's free dream cricket platform. Build your dream team, compete with friends, and track your performance. 100% free forever.
+              India's free cricket entertainment platform. Build your team, compete with friends, and track your performance. 100% free forever. For entertainment purposes only.
             </p>
             <div className="space-y-2.5">
               <a href="mailto:support@squadmastersports.com" className="flex items-center gap-2 text-sm text-background/60 hover:text-background transition-colors">
@@ -122,15 +122,15 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <span className="text-xs text-background/40">100% Free Platform</span>
               <span className="text-xs text-background/40">•</span>
-              <span className="text-xs text-background/40">Skill-Based Gaming</span>
+              <span className="text-xs text-background/40">Entertainment Only</span>
               <span className="text-xs text-background/40">•</span>
               <span className="text-xs text-background/40">18+ Only</span>
             </div>
           </div>
           <div className="mt-3 pt-3 border-t border-background/5">
             <p className="text-[11px] text-background/30 text-center leading-relaxed">
-              This game involves an element of financial risk and may be addictive. Please play responsibly and at your own risk. 
-              This platform is not available in Andhra Pradesh, Assam, Nagaland, Odisha, Sikkim, and Telangana.
+              Squad Master Sports is a free-to-play cricket entertainment platform. No real money is involved. 
+              There are no entry fees, deposits, or cash prizes. This platform is designed purely for fun and entertainment.
             </p>
           </div>
         </div>

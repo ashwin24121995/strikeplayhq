@@ -10,7 +10,7 @@ export default function FairPlay() {
         <div className="container text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: "var(--font-heading)" }}>Fair Play Policy</h1>
-            <p className="text-white/70">Our commitment to a fair and transparent gaming experience for all users.</p>
+            <p className="text-white/70">Our commitment to a fair and transparent experience for all users.</p>
           </motion.div>
         </div>
       </section>

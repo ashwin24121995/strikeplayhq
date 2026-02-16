@@ -8,7 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import PageLayout from "@/components/layout/PageLayout";
-import { matches, testimonials, formatMatchDate, formatMatchTime, teamColors } from "@/data/staticData";
+import { matches, formatMatchDate, formatMatchTime, teamColors } from "@/data/staticData";
 import { getLoginUrl } from "@/const";
 
 const fadeUp = {
@@ -99,14 +99,14 @@ export default function Home() {
               <motion.h1 variants={fadeUp} custom={1} className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" style={{ fontFamily: "var(--font-heading)" }}>
                 India's Free{" "}
                 <span className="bg-gradient-to-r from-yellow-400 to-amber-300 bg-clip-text text-transparent">
-                  Dream Cricket
+                  Cricket Entertainment
                 </span>{" "}
                 Platform
               </motion.h1>
 
               <motion.p variants={fadeUp} custom={2} className="text-lg md:text-xl text-white/70 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Build your dream cricket team, compete with friends, and track your performance. 
-                No deposits, no entry fees — just pure cricket entertainment.
+                Build your cricket team, compete with friends, and enjoy the game. 
+                No deposits, no entry fees — just pure cricket fun for entertainment.
               </motion.p>
 
               <motion.div variants={fadeUp} custom={3} className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
@@ -131,11 +131,11 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-white/60">Skill-Based</span>
+                  <span className="text-sm text-white/60">Free to Play</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-white/60">100% Legal</span>
+                  <span className="text-sm text-white/60">Entertainment Only</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -165,22 +165,22 @@ export default function Home() {
                 >
                   <CricketBallSVG className="w-10 h-10 drop-shadow-lg" />
                 </motion.div>
-                {/* Stats badges */}
+                {/* Decorative badges - no fake data */}
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute top-4 left-4 bg-white/10 backdrop-blur-md rounded-xl px-3 py-2 border border-white/10"
                 >
-                  <div className="text-xs text-white/60">Active Users</div>
-                  <div className="text-lg font-bold text-white">50K+</div>
+                  <div className="text-xs text-white/60">Free to Play</div>
+                  <div className="text-lg font-bold text-white flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-green-400" /> Always</div>
                 </motion.div>
                 <motion.div
                   animate={{ y: [0, 8, 0] }}
                   transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute bottom-8 right-4 bg-white/10 backdrop-blur-md rounded-xl px-3 py-2 border border-white/10"
                 >
-                  <div className="text-xs text-white/60">Contests</div>
-                  <div className="text-lg font-bold text-white">1000+</div>
+                  <div className="text-xs text-white/60">Entertainment</div>
+                  <div className="text-lg font-bold text-white flex items-center gap-1"><Star className="w-4 h-4 text-yellow-400" /> Fun</div>
                 </motion.div>
               </div>
             </motion.div>
@@ -195,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Stats Bar ────────────────────────────────────────────────── */}
+      {/* ─── Platform Highlights ──────────────────────────────────────── */}
       <section className="py-8 -mt-2">
         <div className="container">
           <motion.div
@@ -205,22 +205,22 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
           >
             {[
-              { label: "Active Users", value: "50,000+", icon: Users },
-              { label: "Matches Covered", value: "500+", icon: Trophy },
-              { label: "Contests Played", value: "10,000+", icon: Target },
-              { label: "Teams Created", value: "1,00,000+", icon: BarChart3 },
-            ].map((stat, i) => (
+              { label: "Build Teams", desc: "Select your best XI", icon: Users },
+              { label: "Join Contests", desc: "Free to enter", icon: Trophy },
+              { label: "Track Scores", desc: "Live performance", icon: Target },
+              { label: "Leaderboards", desc: "Compete for the top", icon: BarChart3 },
+            ].map((item, i) => (
               <motion.div
-                key={stat.label}
+                key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 className="text-center p-5 rounded-2xl bg-card border border-border/50 shadow-sm hover:shadow-md transition-shadow"
               >
-                <stat.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                <div className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: "var(--font-heading)" }}>{stat.value}</div>
-                <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                <item.icon className="w-6 h-6 text-primary mx-auto mb-2" />
+                <div className="text-lg font-bold text-foreground" style={{ fontFamily: "var(--font-heading)" }}>{item.label}</div>
+                <div className="text-xs text-muted-foreground mt-1">{item.desc}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -240,20 +240,20 @@ export default function Home() {
               Why Choose Us
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>
-              Everything You Need for Dream Cricket
+              Everything You Need for Cricket Fun
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              A complete platform designed for cricket enthusiasts who want to enjoy the thrill of dream cricket without any financial risk.
+              A complete free-to-play platform designed for cricket enthusiasts who love the game.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Trophy, title: "Build Your Dream Team", desc: "Select 11 players within a 100-credit budget. Choose from batsmen, bowlers, all-rounders, and wicket-keepers.", color: "bg-blue-50 text-blue-600" },
-              { icon: Target, title: "Join Free Contests", desc: "Compete in unlimited free contests for every match. No entry fees, no deposits — ever.", color: "bg-green-50 text-green-600" },
-              { icon: TrendingUp, title: "Track Performance", desc: "Real-time scoring, detailed analytics, and comprehensive performance tracking for every match.", color: "bg-purple-50 text-purple-600" },
-              { icon: Award, title: "Climb Leaderboards", desc: "Compete for the top spot on global leaderboards. Earn bragging rights and achievement badges.", color: "bg-amber-50 text-amber-600" },
-              { icon: Shield, title: "Fair & Transparent", desc: "Transparent scoring system, anti-cheating measures, and fair play policies for all users.", color: "bg-red-50 text-red-600" },
+              { icon: Trophy, title: "Build Your Team", desc: "Select 11 players within a 100-credit budget. Choose from batsmen, bowlers, all-rounders, and wicket-keepers.", color: "bg-blue-50 text-blue-600" },
+              { icon: Target, title: "Join Free Contests", desc: "Compete in free contests for every match. No entry fees, no deposits — ever. Pure entertainment.", color: "bg-green-50 text-green-600" },
+              { icon: TrendingUp, title: "Track Performance", desc: "Live scoring, detailed analytics, and comprehensive performance tracking for every match.", color: "bg-purple-50 text-purple-600" },
+              { icon: Award, title: "Climb Leaderboards", desc: "Compete for the top spot on leaderboards. Earn bragging rights and achievement badges.", color: "bg-amber-50 text-amber-600" },
+              { icon: Shield, title: "Fair & Transparent", desc: "Transparent scoring system and fair play policies for all users. Everyone plays on a level field.", color: "bg-red-50 text-red-600" },
               { icon: BookOpen, title: "Learn & Improve", desc: "Comprehensive guides, strategy tutorials, and cricket knowledge resources to improve your game.", color: "bg-teal-50 text-teal-600" },
             ].map((feature, i) => (
               <motion.div
@@ -294,7 +294,7 @@ export default function Home() {
               How It Works
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Get started in minutes. Build your team, join contests, and start competing.
+              Get started in minutes. Build your team, join contests, and enjoy the game.
             </p>
           </motion.div>
 
@@ -303,7 +303,7 @@ export default function Home() {
               { step: "01", title: "Sign Up Free", desc: "Create your account in seconds. No payment required.", icon: Users },
               { step: "02", title: "Pick a Match", desc: "Browse upcoming matches and select one to play.", icon: Clock },
               { step: "03", title: "Build Your Team", desc: "Select 11 players within 100 credits. Pick Captain & Vice-Captain.", icon: Zap },
-              { step: "04", title: "Compete & Win", desc: "Join contests and track your performance on the leaderboard.", icon: Trophy },
+              { step: "04", title: "Enjoy & Compete", desc: "Join contests and track your performance on the leaderboard.", icon: Trophy },
             ].map((item, i) => (
               <motion.div
                 key={item.step}
@@ -418,54 +418,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Testimonials ─────────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24 bg-muted/30">
+      {/* ─── Entertainment Disclaimer ─────────────────────────────────── */}
+      <section className="py-12 bg-muted/30">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-14"
           >
-            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Testimonials
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>
-              What Our Users Say
-            </h2>
+            <Card className="border-primary/20 bg-primary/5">
+              <CardContent className="p-8 text-center">
+                <Shield className="w-10 h-10 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "var(--font-heading)" }}>
+                  Entertainment Purpose Only
+                </h3>
+                <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                  Squad Master Sports is a completely free-to-play cricket entertainment platform. 
+                  We do not charge any entry fees, deposits, or subscription costs. There are no real money prizes or cash rewards. 
+                  All features are designed purely for fun and entertainment. Enjoy the game responsibly.
+                </p>
+              </CardContent>
+            </Card>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.slice(0, 6).map((t, i) => (
-              <motion.div
-                key={t.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <Card className="h-full border-border/50 hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex gap-1 mb-3">
-                      {Array.from({ length: t.rating }).map((_, j) => (
-                        <Star key={j} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      ))}
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed italic">"{t.text}"</p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-full gradient-primary flex items-center justify-center text-white text-sm font-bold">
-                        {t.name[0]}
-                      </div>
-                      <div>
-                        <div className="text-sm font-medium">{t.name}</div>
-                        <div className="text-xs text-muted-foreground">{t.location}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -487,11 +461,11 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6" style={{ fontFamily: "var(--font-heading)" }}>
-              Ready to Build Your Dream Team?
+              Ready to Build Your Cricket Team?
             </h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Join thousands of cricket enthusiasts on India's premier free dream cricket platform. 
-              No deposits, no entry fees — just pure cricket entertainment.
+              Start playing on India's free cricket entertainment platform. 
+              No deposits, no entry fees — just pure cricket fun.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a href={getLoginUrl()}>

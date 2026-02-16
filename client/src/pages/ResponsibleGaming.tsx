@@ -9,8 +9,8 @@ export default function ResponsibleGaming() {
       <section className="gradient-hero text-white py-12 lg:py-16">
         <div className="container text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: "var(--font-heading)" }}>Responsible Gaming</h1>
-            <p className="text-white/70">Our commitment to promoting healthy and responsible gaming habits.</p>
+            <h1 className="text-3xl md:text-4xl font-bold mb-3" style={{ fontFamily: "var(--font-heading)" }}>Responsible Play</h1>
+            <p className="text-white/70">Our commitment to promoting healthy and responsible entertainment habits.</p>
           </motion.div>
         </div>
       </section>
@@ -23,15 +23,15 @@ export default function ResponsibleGaming() {
                 <Heart className="w-6 h-6 text-green-600 shrink-0 mt-0.5" />
                 <div>
                   <h2 className="text-lg font-bold text-green-900 mb-2" style={{ fontFamily: "var(--font-heading)" }}>100% Free Platform</h2>
-                  <p className="text-sm text-green-800 leading-relaxed">Squad Master Sports is a completely free platform. There are no entry fees, no deposits, no real money prizes, and no in-app purchases. Our platform is designed purely for entertainment and educational purposes. We believe that dream cricket should be accessible to everyone without financial risk.</p>
+                  <p className="text-sm text-green-800 leading-relaxed">Squad Master Sports is a completely free platform. There are no entry fees, no deposits, no real money prizes, and no in-app purchases. Our platform is designed purely for entertainment purposes. We believe that cricket entertainment should be accessible to everyone without any cost.</p>
                 </div>
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { icon: Clock, title: "Time Management", desc: "We encourage users to set personal time limits and take regular breaks. Gaming should be a fun activity, not an obsession. Balance your gaming with other activities.", color: "bg-blue-50 text-blue-600" },
-                { icon: BookOpen, title: "Educational Focus", desc: "Our platform emphasizes learning and skill development. Use dream cricket as a tool to improve your cricket knowledge and analytical skills.", color: "bg-purple-50 text-purple-600" },
+                { icon: Clock, title: "Time Management", desc: "We encourage users to set personal time limits and take regular breaks. Playing should be a fun activity, not an obsession. Balance your time with other activities.", color: "bg-blue-50 text-blue-600" },
+                { icon: BookOpen, title: "Educational Focus", desc: "Our platform emphasizes learning and entertainment. Use it as a tool to improve your cricket knowledge and analytical understanding of the sport.", color: "bg-purple-50 text-purple-600" },
                 { icon: Users, title: "Community Support", desc: "We foster a supportive community where users can learn from each other, share strategies, and enjoy cricket together in a positive environment.", color: "bg-teal-50 text-teal-600" },
                 { icon: Shield, title: "Age Verification", desc: "We strictly enforce our 18+ age requirement. Minors are not permitted to use our Platform. We may request age verification at any time.", color: "bg-amber-50 text-amber-600" },
               ].map((item, i) => (
@@ -51,15 +51,15 @@ export default function ResponsibleGaming() {
 
             <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">
               <div>
-                <h2 className="text-xl font-bold text-foreground mb-3" style={{ fontFamily: "var(--font-heading)" }}>Tips for Responsible Gaming</h2>
+                <h2 className="text-xl font-bold text-foreground mb-3" style={{ fontFamily: "var(--font-heading)" }}>Tips for Responsible Play</h2>
                 <ul className="list-disc pl-6 space-y-1.5">
                   <li>Set a personal time limit for how long you play each day.</li>
                   <li>Take regular breaks — step away from the screen every hour.</li>
-                  <li>Remember that dream cricket is a game of skill and entertainment.</li>
-                  <li>Don't let gaming interfere with your work, studies, or relationships.</li>
+                  <li>Remember that this is a free entertainment platform for fun.</li>
+                  <li>Don't let playing interfere with your work, studies, or relationships.</li>
                   <li>Use our platform as a learning tool to improve your cricket knowledge.</li>
                   <li>Engage positively with the community and respect other players.</li>
-                  <li>If you feel that gaming is becoming a problem, take a break or seek help.</li>
+                  <li>If you feel that playing is becoming excessive, take a break.</li>
                 </ul>
               </div>
 
@@ -73,7 +73,7 @@ export default function ResponsibleGaming() {
                   <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                   <div>
                     <h3 className="text-base font-semibold text-amber-900 mb-1" style={{ fontFamily: "var(--font-heading)" }}>Need Help?</h3>
-                    <p className="text-sm text-amber-800">If you or someone you know is struggling with gaming-related issues, please reach out to professional help services. You can also contact us at support@squadmastersports.com for guidance and support.</p>
+                    <p className="text-sm text-amber-800">If you have any concerns about your usage of the platform, please reach out to us. You can contact us at support@squadmastersports.com for guidance and support.</p>
                   </div>
                 </div>
               </div>

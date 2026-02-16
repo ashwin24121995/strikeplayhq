@@ -17,10 +17,10 @@ export default function About() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center max-w-3xl mx-auto">
             <span className="inline-block px-3 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-4">About Us</span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ fontFamily: "var(--font-heading)" }}>
-              Dream Cricket for <span className="text-yellow-400">Everyone</span>
+              Cricket Entertainment for <span className="text-yellow-400">Everyone</span>
             </h1>
             <p className="text-lg text-white/70 leading-relaxed">
-              Squad Master Sports is India's premier free dream cricket platform, built with a mission to make dream cricket accessible to every cricket enthusiast — without any financial risk.
+              Squad Master Sports is India's free cricket entertainment platform, built with a mission to make cricket fun accessible to every cricket enthusiast — completely free of charge.
             </p>
           </motion.div>
         </div>
@@ -33,12 +33,12 @@ export default function About() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
               <motion.div variants={fadeIn} custom={0}>
                 <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">Our Mission</span>
-                <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>Making Dream Cricket Accessible to All</h2>
+                <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>Making Cricket Fun Accessible to All</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  We believe that every cricket fan deserves the opportunity to experience the thrill of building their dream team and competing with others — without having to worry about money. That's why Squad Master Sports is, and always will be, 100% free.
+                  We believe that every cricket fan deserves the opportunity to experience the joy of building their own team and competing with others — without having to worry about money. That's why Squad Master Sports is, and always will be, 100% free.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Our platform is designed to be educational, entertaining, and community-driven. Whether you're a seasoned cricket analyst or a newcomer to the sport, Squad Master Sports provides the tools and resources you need to enjoy dream cricket responsibly.
+                  Our platform is designed to be educational, entertaining, and community-driven. Whether you're a seasoned cricket analyst or a newcomer to the sport, Squad Master Sports provides the tools and resources you need to enjoy cricket entertainment.
                 </p>
               </motion.div>
             </motion.div>
@@ -47,10 +47,10 @@ export default function About() {
                 <span className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">Our Vision</span>
                 <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: "var(--font-heading)" }}>Building India's Largest Free Cricket Community</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  We envision a world where cricket fans can connect, compete, and learn together on a platform that prioritizes skill development over financial gain. Our goal is to build the largest community of cricket enthusiasts in India.
+                  We envision a world where cricket fans can connect, compete, and learn together on a platform that prioritizes fun and entertainment. Our goal is to build the largest community of cricket enthusiasts in India.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Through transparent scoring, fair play policies, and educational content, we aim to set the standard for what a responsible dream cricket platform should look like.
+                  Through transparent scoring, fair play policies, and educational content, we aim to set the standard for what a responsible cricket entertainment platform should look like.
                 </p>
               </motion.div>
             </motion.div>
@@ -69,7 +69,7 @@ export default function About() {
             {[
               { icon: Heart, title: "Community First", desc: "We prioritize building a vibrant community of cricket lovers over everything else.", color: "bg-red-50 text-red-600" },
               { icon: Shield, title: "Transparency", desc: "Clear scoring rules, fair play policies, and no hidden costs or surprises.", color: "bg-blue-50 text-blue-600" },
-              { icon: BookOpen, title: "Education", desc: "We help users learn cricket strategy, improve their knowledge, and develop skills.", color: "bg-green-50 text-green-600" },
+              { icon: BookOpen, title: "Education", desc: "We help users learn cricket strategy, improve their knowledge, and develop understanding.", color: "bg-green-50 text-green-600" },
               { icon: Zap, title: "Innovation", desc: "Constantly improving our platform with new features, better UX, and cutting-edge technology.", color: "bg-purple-50 text-purple-600" },
             ].map((value, i) => (
               <motion.div key={value.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
@@ -97,7 +97,7 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               { label: "Entry Fee", value: "₹0", sub: "Always Free" },
-              { label: "Platform", value: "100%", sub: "Skill-Based" },
+              { label: "Platform", value: "100%", sub: "Entertainment" },
               { label: "Age Requirement", value: "18+", sub: "Verified Users" },
             ].map((fact, i) => (
               <motion.div key={fact.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center p-8 rounded-2xl bg-card border border-border/50 shadow-sm">

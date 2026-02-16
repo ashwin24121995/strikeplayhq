@@ -24,7 +24,7 @@ export default function HowToPlay() {
             {[
               { step: 1, icon: Users, title: "Create Your Free Account", desc: "Sign up in seconds with your email. No payment required, no credit card needed. Your account gives you full access to all features on the platform.", tips: ["Use a valid email for account recovery", "Choose a unique username for the leaderboard", "Complete your profile for a personalized experience"] },
               { step: 2, icon: Trophy, title: "Browse Available Matches", desc: "Explore upcoming cricket matches from IPL, international series, and other tournaments. Each match shows the teams, venue, date, and available contests.", tips: ["Check match timings to plan your team early", "Look for matches between teams you know well", "Live matches show real-time scores and updates"] },
-              { step: 3, icon: Zap, title: "Build Your Dream Team", desc: "Select 11 players from both teams within a 100-credit budget. Choose a balanced mix of batsmen, bowlers, all-rounders, and wicket-keepers.", tips: ["Balance your team across all roles", "Don't spend all credits on star players", "Check recent form and pitch conditions", "Maximum 7 players from one team"] },
+              { step: 3, icon: Zap, title: "Build Your Team", desc: "Select 11 players from both teams within a 100-credit budget. Choose a balanced mix of batsmen, bowlers, all-rounders, and wicket-keepers.", tips: ["Balance your team across all roles", "Don't spend all credits on star players", "Check recent form and pitch conditions", "Maximum 7 players from one team"] },
               { step: 4, icon: Crown, title: "Pick Captain & Vice-Captain", desc: "Choose your Captain (2x points) and Vice-Captain (1.5x points) wisely. These selections can make or break your team's total score.", tips: ["Pick consistent performers as Captain", "All-rounders make great Captain choices", "Consider the match conditions for your picks"] },
               { step: 5, icon: Target, title: "Join Free Contests", desc: "Enter any number of free contests for each match. Compete against other players and climb the leaderboard with your cricket knowledge.", tips: ["Join multiple contests for more fun", "Try different team combinations", "All contests are 100% free to enter"] },
               { step: 6, icon: BarChart3, title: "Track Your Performance", desc: "Watch your points accumulate as the match progresses. Track live scores, player performances, and your position on the leaderboard in real-time.", tips: ["Check the live leaderboard during matches", "Analyze your team's performance after each match", "Learn from top-performing teams on the leaderboard"] },
@@ -95,7 +95,7 @@ export default function HowToPlay() {
           {/* CTA */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12 text-center p-8 rounded-2xl gradient-primary text-white">
             <h2 className="text-2xl font-bold mb-3" style={{ fontFamily: "var(--font-heading)" }}>Ready to Start Playing?</h2>
-            <p className="text-white/70 mb-6 max-w-md mx-auto">Put your cricket knowledge to the test. Build your dream team and compete for free!</p>
+            <p className="text-white/70 mb-6 max-w-md mx-auto">Put your cricket knowledge to the test. Build your team and compete for free!</p>
             <div className="flex gap-3 justify-center">
               <Link href="/matches">
                 <Button size="lg" className="rounded-full bg-white text-primary hover:bg-white/90">
