@@ -2,13 +2,12 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import {
   Trophy, Users, BarChart3, Shield, Star, Zap, Target,
-  ChevronRight, CheckCircle2, ArrowRight, Clock, Award,
+  CheckCircle2, ArrowRight, Clock, Award,
   TrendingUp, Sparkles, Play, BookOpen, HeadphonesIcon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import PageLayout from "@/components/layout/PageLayout";
-import { matches, formatMatchDate, formatMatchTime, teamColors } from "@/data/staticData";
 import { getLoginUrl } from "@/const";
 
 const fadeUp = {
@@ -58,8 +57,6 @@ function StumpsSVG({ className }: { className?: string }) {
 }
 
 export default function Home() {
-  const upcomingMatches = matches.filter(m => m.status === "upcoming").slice(0, 3);
-
   return (
     <PageLayout>
       {/* ─── Hero Section ─────────────────────────────────────────────── */}
@@ -328,95 +325,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── Upcoming Matches ─────────────────────────────────────────── */}
-      <section className="py-16 lg:py-24">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-between mb-10"
-          >
-            <div>
-              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-3">
-                Live & Upcoming
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>
-                Featured Matches
-              </h2>
-            </div>
-            <Link href="/matches">
-              <Button variant="outline" className="rounded-full hidden sm:flex">
-                View All Matches
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingMatches.map((match, i) => {
-              const t1Color = teamColors[match.team1Short] ?? { primary: "#333", secondary: "#666", text: "#fff" };
-              const t2Color = teamColors[match.team2Short] ?? { primary: "#333", secondary: "#666", text: "#fff" };
-              return (
-                <motion.div
-                  key={match.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <Link href={`/matches`}>
-                    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 border-border/50 group cursor-pointer">
-                      <div className="h-1.5 bg-gradient-to-r" style={{ backgroundImage: `linear-gradient(to right, ${t1Color.primary}, ${t2Color.primary})` }} />
-                      <CardContent className="p-5">
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="text-xs font-medium text-primary bg-primary/10 px-2.5 py-1 rounded-full">{match.tournament}</span>
-                          <span className="text-xs text-muted-foreground">{formatMatchDate(match.matchDate)}</span>
-                        </div>
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="text-center flex-1">
-                            <div className="w-14 h-14 rounded-xl mx-auto mb-2 flex items-center justify-center text-white font-bold text-lg shadow-md" style={{ backgroundColor: t1Color.primary }}>
-                              {match.team1Short}
-                            </div>
-                            <div className="text-sm font-medium truncate px-1">{match.team1}</div>
-                          </div>
-                          <div className="px-4">
-                            <div className="text-xs font-bold text-muted-foreground bg-muted px-3 py-1.5 rounded-full">VS</div>
-                          </div>
-                          <div className="text-center flex-1">
-                            <div className="w-14 h-14 rounded-xl mx-auto mb-2 flex items-center justify-center text-white font-bold text-lg shadow-md" style={{ backgroundColor: t2Color.primary }}>
-                              {match.team2Short}
-                            </div>
-                            <div className="text-sm font-medium truncate px-1">{match.team2}</div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between pt-3 border-t border-border/50">
-                          <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                            <Clock className="w-3.5 h-3.5" />
-                            {formatMatchTime(match.matchDate)}
-                          </div>
-                          <span className="text-xs font-medium text-primary group-hover:underline">
-                            Create Team →
-                          </span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          <div className="text-center mt-8 sm:hidden">
-            <Link href="/matches">
-              <Button variant="outline" className="rounded-full">
-                View All Matches
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ─── Entertainment Disclaimer ─────────────────────────────────── */}
       <section className="py-12 bg-muted/30">
