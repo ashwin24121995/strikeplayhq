@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Trophy, Medal, Crown, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import PageLayout from "@/components/layout/PageLayout";
+import AuthGuard from "@/components/AuthGuard";
 import { leaderboard } from "@/data/staticData";
 
 function getRankDisplay(rank: number) {
@@ -13,6 +14,7 @@ function getRankDisplay(rank: number) {
 
 export default function Leaderboard() {
   return (
+    <AuthGuard title="Sign In to View Leaderboard" description="Sign in to see the global rankings and track your position among other players.">
     <PageLayout>
       <section className="gradient-hero text-white py-12 lg:py-16">
         <div className="container text-center">
@@ -105,5 +107,6 @@ export default function Leaderboard() {
         </div>
       </section>
     </PageLayout>
+    </AuthGuard>
   );
 }

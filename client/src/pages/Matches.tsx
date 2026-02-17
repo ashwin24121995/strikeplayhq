@@ -5,6 +5,7 @@ import { Clock, MapPin, Trophy, Radio, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import PageLayout from "@/components/layout/PageLayout";
+import AuthGuard from "@/components/AuthGuard";
 import { matches, formatMatchDate, formatMatchTime, teamColors } from "@/data/staticData";
 
 const tabs = [
@@ -19,6 +20,7 @@ export default function Matches() {
   const filtered = activeTab === "all" ? matches : matches.filter(m => m.status === activeTab);
 
   return (
+    <AuthGuard title="Sign In to View Matches" description="Sign in to browse upcoming, live, and completed cricket matches. Build your team and join contests for free.">
     <PageLayout>
       <section className="gradient-hero text-white py-12 lg:py-16">
         <div className="container text-center">
@@ -135,5 +137,6 @@ export default function Matches() {
         </div>
       </section>
     </PageLayout>
+    </AuthGuard>
   );
 }

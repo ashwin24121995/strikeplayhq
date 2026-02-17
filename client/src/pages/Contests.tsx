@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import PageLayout from "@/components/layout/PageLayout";
+import AuthGuard from "@/components/AuthGuard";
 import { contests, matches, teamColors } from "@/data/staticData";
 import { toast } from "sonner";
 
@@ -18,6 +19,7 @@ export default function Contests() {
   };
 
   return (
+    <AuthGuard title="Sign In to View Contests" description="Sign in to browse and join free contests. Compete with other cricket fans for fun.">
     <PageLayout>
       <section className="gradient-hero text-white py-12 lg:py-16">
         <div className="container text-center">
@@ -129,5 +131,6 @@ export default function Contests() {
         </div>
       </section>
     </PageLayout>
+    </AuthGuard>
   );
 }

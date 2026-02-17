@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import PageLayout from "@/components/layout/PageLayout";
+import AuthGuard from "@/components/AuthGuard";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 
@@ -25,38 +26,10 @@ const recentTeams = [
 ];
 
 export default function Dashboard() {
-  const { user, isAuthenticated, loading } = useAuth();
-
-  if (loading) {
-    return (
-      <PageLayout>
-        <div className="container py-20 text-center">
-          <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto" />
-        </div>
-      </PageLayout>
-    );
-  }
-
-  if (!isAuthenticated) {
-    return (
-      <PageLayout>
-        <div className="container py-20 text-center max-w-lg mx-auto">
-          <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mx-auto mb-6">
-            <Users className="w-8 h-8 text-white" />
-          </div>
-          <h2 className="text-2xl font-bold mb-3" style={{ fontFamily: "var(--font-heading)" }}>Sign In to View Dashboard</h2>
-          <p className="text-muted-foreground mb-6">Access your teams, stats, and performance analytics by signing in to your account.</p>
-          <a href={getLoginUrl()}>
-            <Button className="rounded-full gradient-primary border-0 text-white px-8">
-              Sign In to Continue
-            </Button>
-          </a>
-        </div>
-      </PageLayout>
-    );
-  }
+  const { user } = useAuth();
 
   return (
+    <AuthGuard title="Sign In to Your Dashboard" description="Sign in to view your stats, recent teams, and track your cricket performance.">
     <PageLayout>
       {/* Header */}
       <section className="gradient-hero text-white py-8 lg:py-12">
@@ -189,5 +162,6 @@ export default function Dashboard() {
         </div>
       </section>
     </PageLayout>
+    </AuthGuard>
   );
 }

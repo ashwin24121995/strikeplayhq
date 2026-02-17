@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import PageLayout from "@/components/layout/PageLayout";
+import AuthGuard from "@/components/AuthGuard";
 import { getMatchById, getPlayersByMatchId, getRoleBadgeColor, teamColors, type Player } from "@/data/staticData";
 import { toast } from "sonner";
 
@@ -94,6 +95,7 @@ export default function TeamBuilder() {
   const t2Color = teamColors[match.team2Short] ?? { primary: "#333" };
 
   return (
+    <AuthGuard title="Sign In to Build Your Team" description="Sign in to select players, set your captain, and build your cricket team for free.">
     <PageLayout>
       {/* Header */}
       <section className="gradient-hero text-white py-6 lg:py-8">
@@ -254,5 +256,6 @@ export default function TeamBuilder() {
         </div>
       </section>
     </PageLayout>
+    </AuthGuard>
   );
 }

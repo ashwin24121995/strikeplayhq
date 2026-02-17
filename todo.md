@@ -55,3 +55,4 @@
 - [x] Update all legal pages (Terms, Privacy, Fair Play, Responsible Gaming, Refund)
 - [x] Update static data file
 - [x] Update meta tags and SEO descriptions
+- [x] Hide match content behind login — require sign-in for Matches, Contests, TeamBuilder, Leaderboard, Dashboard
