@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Trophy, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
@@ -26,9 +26,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <div className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center shadow-md">
-              <Trophy className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663073602365/eJTPnZspKSGbPdTD.png"
+              alt="Squad Master Sports"
+              className="w-10 h-10 rounded-lg object-contain"
+            />
             <div className="flex flex-col">
               <span className="text-lg font-bold leading-tight tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
                 Squad Master

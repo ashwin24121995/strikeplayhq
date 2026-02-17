@@ -57,3 +57,4 @@
 - [x] Update meta tags and SEO descriptions
 - [x] Hide match content behind login — require sign-in for Matches, Contests, TeamBuilder, Leaderboard, Dashboard
 - [x] Remove match section from Home page — no match data visible without login
+- [x] Create professional logo matching the website's dark blue-gold theme and set as website logo
