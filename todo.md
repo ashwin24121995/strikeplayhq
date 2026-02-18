@@ -80,3 +80,4 @@
 - [x] Update contact number to "1800-000-5533" everywhere
 - [x] Remove Dashboard link from footer
 - [x] Review and remove all brand names, celebrity names, and external references from website content
+- [x] Review entire website for clean behavior - no cloaking, deceptive practices, or hidden functionality
