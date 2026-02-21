@@ -109,3 +109,4 @@
 - [x] Create assets folder structure for all images
 - [x] Move all images to assets/images folder in public directory
 - [x] Update all image references to use local assets (no CDN links)
+- [x] Configure git to use StrikePlay as commit author name
