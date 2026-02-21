@@ -106,3 +106,6 @@
 - [x] Update all brand name references to StrikePlay
 - [x] Update domain references to strikeplayhq.com
 - [x] Update meta tags and SEO content
+- [x] Create assets folder structure for all images
+- [x] Move all images to assets/images folder in public directory
+- [x] Update all image references to use local assets (no CDN links)
