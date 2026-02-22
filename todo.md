@@ -121,3 +121,4 @@
 - [x] Add contact information in footer
 - [x] Add "Entertainment Only" disclaimers throughout site
 - [x] Move age verification modal from home page to login page only
+- [x] Fix Vercel NOT_FOUND error when refreshing pages (add vercel.json for SPA routing)
